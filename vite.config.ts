@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite-plus'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -11,6 +11,12 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   staged: {
     '*': 'vp check --fix',
+  },
+  lint: {
+    options: {
+      typeAware: true,
+      typeCheck: true,
+    },
   },
   fmt: {
     semi: false,
