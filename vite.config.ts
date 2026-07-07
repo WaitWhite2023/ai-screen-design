@@ -23,9 +23,21 @@ export default defineConfig({
     singleQuote: true,
     trailingComma: 'all',
     arrowParens: 'always',
-    endOfLine: 'lf',
     bracketSpacing: true,
     ignorePatterns: [],
+    endOfLine: 'lf',
+    overrides: [
+      {
+        files: ['*.json5'],
+        options: {
+          quoteProps: 'preserve',
+          singleQuote: false,
+        },
+      },
+    ],
+    plugins: ['prettier-plugin-tailwindcss'],
+    printWidth: 100,
+    proseWrap: 'never',
   },
   plugins: [
     vue(),
