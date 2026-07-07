@@ -26,3 +26,6 @@ dist-ssr
 !.vscode/settings.json
 !.vscode/extensions.json
 
+# Claude Code
+CLAUDE.md
+
